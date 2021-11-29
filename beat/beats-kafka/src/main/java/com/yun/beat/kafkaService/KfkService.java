@@ -16,7 +16,7 @@ public class KfkService {
     @Autowired
     private KafkaTemplate<Integer,String> kafkaTemplate;
 
-    //消费者：监听topic1，groupId1
+    //消费者：监听topic1，groupId1修改监听
     @KafkaListener(topics = {"topic1"},groupId = "groupId1")
     public void consumer1(ConsumerRecord<Integer,String> record){
         log.info("consumer1 kfk consume message start...");
