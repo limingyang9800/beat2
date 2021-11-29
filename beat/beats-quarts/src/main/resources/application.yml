@@ -1,0 +1,18 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/test
+      password: root
+      username: root
+      initial-size: 5
+      min-idle: 1
+      max-active: 50
+      max-wait: 50000
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  check-config-location: true
+  mapper-locations: classpath:mappers/*.xml
+  type-aliases-package: com.yun.beat.bean
