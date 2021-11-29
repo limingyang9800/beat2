@@ -24,7 +24,7 @@ public class KfkService {
         log.info("consumer1 kfk consume message end...");
     }
 
-    //消费者：监听topic1，groupId2
+    //消费者：监听topic1，groupId2修改监听2
     @KafkaListener(topics = {"topic1"},groupId = "groupId2")
     public void consumer3(ConsumerRecord<Integer,String> record){
         log.info("consumer3 kfk consume message start...");
